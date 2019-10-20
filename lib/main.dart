@@ -5,34 +5,47 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //final size = MediaQuery.of(context).size;
+    //final width = size.width;
+    //final height = size.height;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Column( // Change with Row
-            verticalDirection: VerticalDirection.down,
-            mainAxisAlignment: MainAxisAlignment.start,
+        body: Container(
+          padding: EdgeInsets.only(top: 25.0),
+          child: Row( // Change with Row
+            //verticalDirection: VerticalDirection.down,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Container(
-                height: 100.0,
-                color: Colors.white,
-                child: Text('Container1'),
-              ),
-              SizedBox(
-                height: 20.0,
-                //width: 30.0,
-              ),
-              Container(
-                height: 100.0,
-                color: Colors.blue,
-                child: Text('Container2'),
-              ),
-              Container(
-                height: 100.0,
+                width: 100,
                 color: Colors.red,
-                child: Text('Container3'),
+                //child: Text('Container1'),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.yellow,
+                    //child: Text('Container1'),
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                    //child: Text('Container1'),
+                  ),
+                ],
+              ),
+              Container(
+                width: 100 ,
+                color: Colors.blue,
+                //child: Text('Container3'),
               ),
             ],
           ),
